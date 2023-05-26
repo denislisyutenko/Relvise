@@ -3,31 +3,38 @@
 
 .subscribe {
   position: relative;
+
   padding-bottom: 20px;
 
   &::before {
-    content: '';
     position: absolute;
     bottom: 0;
+    left: 0;
+
     width: 100%;
     height: 77px;
-    left: 0;
+
+    content: "";
+
     background: #252b42;
   }
 
   &_form {
-    flex: 0 1 50%;
     display: flex;
     align-items: center;
+    flex: 0 1 50%;
   }
 
   &__body {
     position: relative;
     z-index: 2;
-    padding: 30px 50px;
+
     align-items: center;
-    background: #17213c;
+
+    padding: 30px 50px;
+
     border-radius: 2px;
+    background: #17213c;
 
     @media (min-width: 1070px) {
       margin: 0 30px;
@@ -39,7 +46,7 @@
     }
 
     @media (max-width: 810px) {
-      margin: 0px -15px;
+      margin: 0 -15px;
       padding: 20px 15px;
     }
 
@@ -50,12 +57,14 @@
   }
 
   &__title {
-    font-weight: 700;
-    font-size: 24px;
     letter-spacing: 0.1px;
-    line-height: 133.333333%;
     /* 32/24 */
+
     color: #ffffff;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 133.333333%;
 
     @media (max-width: 810px) {
       margin: 0 0 20px 0;
@@ -67,16 +76,18 @@
   }
 
   &__input {
-    width: 100%;
     flex: 1 1 auto;
+
+    box-sizing: border-box;
+    width: 100%;
     min-height: 58px;
-    background-color: #f9f9f9;
-    color: #737373;
     padding: 0 20px;
+
+    color: #737373;
     border: 1px solid #e6e6e6;
     border-right: 0;
-    box-sizing: border-box;
     border-radius: 5px 0 0 5px;
+    background-color: #f9f9f9;
 
     &:focus {
       color: #000000;
@@ -88,18 +99,21 @@
   }
 
   &__button {
-    background: #ff7b47;
-    border: 1px solid #e6e6e6;
-    border-radius: 0px 5px 5px 0px;
     display: flex;
-    min-height: 58px;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    color: #ffffff;
+    justify-content: center;
+
+    min-height: 58px;
     padding: 0 22px;
-    transition: all 0.3s ease 0s;
+
     cursor: pointer;
+    transition: all 0.3s ease 0s;
+    text-align: center;
+
+    color: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 0 5px 5px 0;
+    background: #ff7b47;
 
     &:hover {
       background: #a15132;

@@ -2,38 +2,39 @@
 @use "../../../mixins" as *;
 
 .practice {
-  padding: 125px 0px 80px 0px;
+  padding: 125px 0 80px 0;
 
   @include lg {
     .practice {
-      padding: 40px 0px 80px 0px;
+      padding: 40px 0 80px 0;
     }
   }
-
   @include md {
     .practice {
-      padding: 0px 0px 40px 0px;
+      padding: 0 0 40px 0;
     }
   }
 
   &__header {
-    margin: 0px 0px 45px 0px;
+    margin: 0 0 45px 0;
 
     @media (max-width: 630px) {
-      margin: 0px 0px 25px 0px;
+      margin: 0 0 25px 0;
     }
   }
 
   &__body {
-    margin: 0 -20px -30px;
     display: flex;
     flex-wrap: wrap;
+
+    margin: 0 -20px -30px;
   }
 
   &__column {
-    padding: 0 20px;
-    margin: 0px 0px 30px 0px;
     flex: 0 1 25%;
+
+    margin: 0 0 30px 0;
+    padding: 0 20px;
 
     @media (max-width: 1040px) {
       flex: 0 1 50%;
@@ -43,18 +44,19 @@
       flex: 0 1 100%;
     }
   }
-
-  &__item {}
 }
 
 .item-practice {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+
+  height: 100%;
+
+  background-color: #ffffff;
 
   &__content {
     flex: 1 1 auto;
+
     padding: 30px;
   }
 
@@ -62,7 +64,7 @@
     display: inline-block;
 
     &:not(:last-child) {
-      margin: 0px 0px 15px 0px;
+      margin: 0 0 15px 0;
     }
 
     &:hover {
@@ -71,23 +73,27 @@
   }
 
   &__title {
-    font-weight: 700;
     letter-spacing: 0.1px;
-    font-size: 16px;
-    line-height: 150%;
     /* 24/16 */
+
     color: #252b42;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
   }
 
   &__text {
     color: #737373;
+
     line-height: 142.857143%;
     /* 20/14 */
   }
 
   &__image {
     display: block;
-    padding: 0px 0px 67% 0px;
+
+    padding: 0 0 67% 0;
   }
 }
 

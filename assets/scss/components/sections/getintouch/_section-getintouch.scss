@@ -2,31 +2,31 @@
 @use "../../../mixins" as *;
 
 .getintouch {
-  padding: 80px 0px 135px 0px;
+  padding: 80px 0 135px 0;
 
   @include lg {
-    padding: 50px 0px;
+    padding: 50px 0;
   }
 
   &__header {
-    margin: 0px 0px 80px 0px;
+    margin: 0 0 80px 0;
 
     @include md {
-      margin: 0px 0px 30px 0px;
+      margin: 0 0 30px 0;
     }
-
     @include lg {
-      margin: 0px 0px 50px 0px;
+      margin: 0 0 50px 0;
     }
   }
 
   &__items {
-    margin: 0px -15px;
+    margin: 0 -15px;
 
     @include lg-min {
-      margin: 0;
       display: flex;
       align-items: center;
+
+      margin: 0;
     }
   }
 
@@ -37,41 +37,45 @@
 
 .item-getintouch {
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background: #ffffff;
+
   padding: 50px 15px;
 
+  background: #ffffff;
+
   &_active {
-    background: #252b42;
-    color: #fff;
     padding: 80px 15px;
+
+    color: #ffffff;
+    background: #252b42;
 
     @include lg {
       padding: 50px 15px;
     }
 
     .item-getintouch__button {
+      color: #ffffff;
       border: 1px solid #ffffff;
-      color: #fff;
     }
   }
 
-  &__icon {}
+
 
   &__emails {
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
 
   &__email {
-    font-weight: 600;
-    line-height: 171.428571%;
     /* 24/14 */
     color: inherit;
+
+    font-weight: 600;
+    line-height: 171.428571%;
 
     &:hover {
       text-decoration: underline;
@@ -79,33 +83,37 @@
   }
 
   &__label {
-    font-weight: 700;
     font-size: 16px;
+    font-weight: 700;
     line-height: 150%;
     /* 24/16 */
   }
 
   &__button {
-    border: 1px solid #ff7b47;
-    min-height: 44px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+    padding: 10px 20px;
+
+    transition: all 0.3s ease 0s;
     text-align: center;
+    /* 24/14 */
+
+    color: #ff7b47;
+    border: 1px solid #ff7b47;
     border-radius: 5px;
+
     font-weight: 600;
     line-height: 171.428571%;
-    /* 24/14 */
-    color: #ff7b47;
-    padding: 10px 20px;
-    transition: all 0.3s ease 0s;
 
     &:hover {
+      color: #ffffff;
       background-color: #ff7b47;
-      color: #fff;
     }
   }
-  &>*:not(:last-child) {
-    margin: 0px 0px 15px 0px;
+  & > *:not(:last-child) {
+    margin: 0 0 15px 0;
   }
 }

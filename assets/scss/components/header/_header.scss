@@ -3,15 +3,17 @@
 
 .header {
   position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
   z-index: 50;
+  top: 0;
+  left: 0;
+
+  width: 100%;
 
   &__container {
     display: flex;
-    min-height: 104px;
     align-items: center;
+
+    min-height: 104px;
 
     @include xs {
       min-height: 70px;
@@ -19,9 +21,10 @@
   }
 
   &__logo {
-    font-weight: 700;
-    font-size: 24px;
     color: inherit;
+
+    font-size: 24px;
+    font-weight: 700;
   }
 
   &__menu {
@@ -30,7 +33,6 @@
     @include md {
       margin: 0 0 0 40px;
     }
-
     @include xs {
       margin: 0 0 0 20px;
     }
@@ -53,6 +55,7 @@
 
   &__link {
     color: #737373;
+
     font-weight: 600;
     line-height: 171.428571%;
     /* 24/14 */
@@ -72,28 +75,28 @@
   letter-spacing: 0.2px;
 
   &__title {
-    font-weight: 700;
-    line-height: 142.5%;
     /* 57/40 */
     font-size: 40px;
-
-    &:not(:last-child) {
-      margin: 0 0 10px 0;
-    }
+    font-weight: 700;
+    line-height: 142.5%;
 
     @include lg {
       font-size: 35px;
     }
-
     @include md {
       font-size: 35px;
+    }
+
+    &:not(:last-child) {
+      margin: 0 0 10px 0;
     }
   }
 
   &__sub-title {
-    line-height: 142.5%;
     /* 57/40 */
     color: #737373;
+
+    line-height: 142.5%;
   }
 }
 

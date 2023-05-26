@@ -2,53 +2,58 @@
 @use "../../mixins" as *;
 
 .footer {
-
   &__top {
-    background-color: #17213c;
     padding: 35px 0;
+
+    background-color: #17213c;
   }
 
-  &__main {}
+
 
   &__row {
     display: flex;
     flex-wrap: wrap;
+
     margin: 0 -15px;
   }
 
   &__column {
-    padding: 15px 15px;
     flex: 0 1 16.6667%;
+
+    padding: 15px 15px;
+
+    @include lg {
+      flex: 0 1 25%;
+    }
+    @include md {
+      flex: 0 1 50%;
+    }
 
     &:last-child {
       flex: 0 1 33.334%;
+
       @include lg {
         .footer__column:last-child {
           flex: 1 1 100%;
         }
       }
     }
-
-    @include lg {
-      flex: 0 1 25%;
-
-    }
-    @include md {
-      flex: 0 1 50%;
-    }
   }
 
   &__label {
-    color: #fff;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 150%;
-    /* 24/16 */
-    letter-spacing: 0.1px;
     margin-bottom: 20px;
+    /* 24/16 */
+
+    letter-spacing: 0.1px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
   }
 
-  &__menu {}
+
 
   &__contacts {
     display: flex;
@@ -61,8 +66,8 @@
 
   &__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     @include md {
       flex-direction: column;
@@ -70,13 +75,15 @@
   }
 
   &__copy {
-    font-weight: 600;
-    line-height: 171.428571%;
     /* 24/14 */
     letter-spacing: 0.2px;
 
+    font-weight: 600;
+    line-height: 171.428571%;
+
     @include md {
-      margin: 0px 0px 15px 0px;
+      margin: 0 0 15px 0;
+
       text-align: center;
     }
   }
@@ -88,9 +95,6 @@
 }
 
 .menu-footer {
-
-  &__list {}
-
   &__item {
     &:not(:last-child) {
       margin-bottom: 10px;
@@ -98,9 +102,11 @@
   }
 
   &__link {
-    color: #fff;
-    font-weight: 600;
     display: inline-block;
+
+    color: #ffffff;
+
+    font-weight: 600;
     line-height: 171.428571%;
     /* 24/14 */
 
@@ -111,20 +117,23 @@
 }
 
 .contacts-footer {
-
   &__item {
-    padding: 0px 0px 0px 34px;
     display: flex;
     align-items: center;
+
     min-height: 30px;
+    padding: 0 0 0 34px;
+    /* 24/14 */
+
+    letter-spacing: 0.2px;
+
+    color: #ffffff;
+
     font-weight: 600;
     line-height: 171.428571%;
-    /* 24/14 */
-    letter-spacing: 0.2px;
-    color: #fff;
 
     &:not(:last-child) {
-      margin: 0px 0px 12px 0px;
+      margin: 0 0 12px 0;
     }
 
     &:hover {
@@ -132,24 +141,23 @@
     }
 
     &_phone {
-      background: url('../img/footer/icons/01.svg') 0 0 no-repeat;
+      background: url("../img/footer/icons/01.svg") 0 0 no-repeat;
     }
 
     &_map {
-      background: url('../img/footer/icons/02.svg') 0 0 no-repeat;
+      background: url("../img/footer/icons/02.svg") 0 0 no-repeat;
     }
 
     &_email {
-      background: url('../img/footer/icons/03.svg') 0 0 no-repeat;
+      background: url("../img/footer/icons/03.svg") 0 0 no-repeat;
     }
   }
 }
 
 .social {
-
   &__item {
     &:not(:last-child) {
-      margin: 0px 20px 0px 0px;
+      margin: 0 20px 0 0;
     }
   }
 }

@@ -2,23 +2,25 @@
 @use "../../../mixins" as *;
 
 .clients {
-   padding: 50px 0px;
+  padding: 50px 0;
 
-   &__items {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-   }
+  &__items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-   &__item {
-      padding: 8px 15px;
-      flex: 0 1 16.6667%;
-      text-align: center;
-      min-width: 140px;
+  &__item {
+    flex: 0 1 16.6667%;
 
-      img {
-         max-width: 100%;
-      }
-   }
+    min-width: 140px;
+    padding: 8px 15px;
+
+    text-align: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
 }
