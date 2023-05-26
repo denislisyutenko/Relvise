@@ -1,0 +1,126 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.subscribe {
+  position: relative;
+
+  padding-bottom: 20px;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 77px;
+
+    content: "";
+
+    background: #252b42;
+  }
+
+  &_form {
+    display: flex;
+    align-items: center;
+    flex: 0 1 50%;
+  }
+
+  &__body {
+    position: relative;
+    z-index: 2;
+
+    align-items: center;
+
+    padding: 30px 50px;
+
+    border-radius: 2px;
+    background: #17213c;
+
+    @media (min-width: 1070px) {
+      margin: 0 30px;
+    }
+
+    @media (min-width: 810px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 810px) {
+      margin: 0 -15px;
+      padding: 20px 15px;
+    }
+
+    @media (min-width: 810px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    letter-spacing: 0.1px;
+    /* 32/24 */
+
+    color: #ffffff;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 133.333333%;
+
+    @media (max-width: 810px) {
+      margin: 0 0 20px 0;
+    }
+
+    @media (min-width: 810px) {
+      max-width: 266px;
+    }
+  }
+
+  &__input {
+    flex: 1 1 auto;
+
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 58px;
+    padding: 0 20px;
+
+    color: #737373;
+    border: 1px solid #e6e6e6;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    background-color: #f9f9f9;
+
+    &:focus {
+      color: #000000;
+    }
+
+    @media (max-width: 810px) {
+      padding: 0 15px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 58px;
+    padding: 0 22px;
+
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    text-align: center;
+
+    color: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 0 5px 5px 0;
+    background: #ff7b47;
+
+    &:hover {
+      background: #a15132;
+    }
+
+    @media (max-width: 810px) {
+      padding: 0 15px;
+    }
+  }
+}

@@ -1,0 +1,163 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.footer {
+  &__top {
+    padding: 35px 0;
+
+    background-color: #17213c;
+  }
+
+
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0 -15px;
+  }
+
+  &__column {
+    flex: 0 1 16.6667%;
+
+    padding: 15px 15px;
+
+    @include lg {
+      flex: 0 1 25%;
+    }
+    @include md {
+      flex: 0 1 50%;
+    }
+
+    &:last-child {
+      flex: 0 1 33.334%;
+
+      @include lg {
+        .footer__column:last-child {
+          flex: 1 1 100%;
+        }
+      }
+    }
+  }
+
+  &__label {
+    margin-bottom: 20px;
+    /* 24/16 */
+
+    letter-spacing: 0.1px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+  }
+
+
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__bottom {
+    padding: 25px 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include md {
+      flex-direction: column;
+    }
+  }
+
+  &__copy {
+    /* 24/14 */
+    letter-spacing: 0.2px;
+
+    font-weight: 600;
+    line-height: 171.428571%;
+
+    @include md {
+      margin: 0 0 15px 0;
+
+      text-align: center;
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.menu-footer {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+
+    color: #ffffff;
+
+    font-weight: 600;
+    line-height: 171.428571%;
+    /* 24/14 */
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.contacts-footer {
+  &__item {
+    display: flex;
+    align-items: center;
+
+    min-height: 30px;
+    padding: 0 0 0 34px;
+    /* 24/14 */
+
+    letter-spacing: 0.2px;
+
+    color: #ffffff;
+
+    font-weight: 600;
+    line-height: 171.428571%;
+
+    &:not(:last-child) {
+      margin: 0 0 12px 0;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &_phone {
+      background: url("../img/footer/icons/01.svg") 0 0 no-repeat;
+    }
+
+    &_map {
+      background: url("../img/footer/icons/02.svg") 0 0 no-repeat;
+    }
+
+    &_email {
+      background: url("../img/footer/icons/03.svg") 0 0 no-repeat;
+    }
+  }
+}
+
+.social {
+  &__item {
+    &:not(:last-child) {
+      margin: 0 20px 0 0;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+// @use "../../libs/normalize.css/normalize.scss";
+
+@use "common/typography";
+@use "common/classes";
+
+
+@use "components/header/header";
+
+@use "components/sections/advantages/section-advantages";
+@use "components/sections/clients/section-clients";
+@use "components/sections/contact/contact-main";
+@use "components/sections/getintouch/section-getintouch";
+@use "components/sections/main/section-main";
+@use "components/sections/practice/section-practice";
+@use "components/sections/services/section-services";
+@use "components/sections/subscribe/section-subscribe";
+@use "components/sections/whoweare/section-whoweare";
+
+@use "components/footer/footer";
