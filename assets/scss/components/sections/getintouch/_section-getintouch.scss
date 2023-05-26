@@ -1,0 +1,111 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.getintouch {
+  padding: 80px 0px 135px 0px;
+
+  @include lg {
+    padding: 50px 0px;
+  }
+
+  &__header {
+    margin: 0px 0px 80px 0px;
+
+    @include md {
+      margin: 0px 0px 30px 0px;
+    }
+
+    @include lg {
+      margin: 0px 0px 50px 0px;
+    }
+  }
+
+  &__items {
+    margin: 0px -15px;
+
+    @include lg-min {
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    flex: 0 1 33.333%;
+  }
+}
+
+.item-getintouch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  padding: 50px 15px;
+
+  &_active {
+    background: #252b42;
+    color: #fff;
+    padding: 80px 15px;
+
+    @include lg {
+      padding: 50px 15px;
+    }
+
+    .item-getintouch__button {
+      border: 1px solid #ffffff;
+      color: #fff;
+    }
+  }
+
+  &__icon {}
+
+  &__emails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__email {
+    font-weight: 600;
+    line-height: 171.428571%;
+    /* 24/14 */
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__label {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 150%;
+    /* 24/16 */
+  }
+
+  &__button {
+    border: 1px solid #ff7b47;
+    min-height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: 600;
+    line-height: 171.428571%;
+    /* 24/14 */
+    color: #ff7b47;
+    padding: 10px 20px;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      background-color: #ff7b47;
+      color: #fff;
+    }
+  }
+  &>*:not(:last-child) {
+    margin: 0px 0px 15px 0px;
+  }
+}

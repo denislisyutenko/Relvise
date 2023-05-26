@@ -1,0 +1,74 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.advantages {
+  padding: 80px 0;
+
+  @include lg {
+    padding: 50px 0;
+  }
+
+  @include md {
+    padding: 50px 0;
+  }
+
+  &__header {
+    margin: 0 0 50px 0;
+
+    @include md {
+      margin: 0 0 25px 0;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px -30px;
+  }
+
+  &__column {
+    padding: 0 15px;
+    margin: 0 0 30px 0;
+    flex: 0 1 25%;
+
+    @media (max-width: 1035px) {
+      flex: 0 1 50%;
+    }
+
+    @include sm {
+      flex: 0 1 100%;
+    }
+  }
+
+  &__item {
+    font-weight: 700;
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+
+    &>*:not(:last-child) {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__icon {
+    height: 48px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  &__value {
+    font-size: 40px;
+    line-height: 142.5%;
+    /* 57/40 */
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 150%;
+    /* 24/16 */
+    letter-spacing: 0.1px;
+    color: #737373;
+  }
+}

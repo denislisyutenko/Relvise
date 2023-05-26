@@ -1,0 +1,83 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.services {
+
+  &__body {
+    @media (min-width: 670px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+    
+  }
+
+  &__column {
+    flex: 0 1 33.333%;
+
+    @include lg {
+      flex: 0 1 50%;
+
+      &:last-child {
+        flex: 1 1 100%;
+      }
+
+      &:not(:last-child) {
+        margin: 0 0 30px 0;
+      }
+    }
+    @media (min-width: 670px) {
+      padding: 0 15px;
+    }
+  }
+
+  &__item {
+    height: 100%;
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+    background-color: #fff;
+    padding: 35px;
+
+    @include xs {
+      padding: 25px;
+    }
+  }
+}
+
+.item-services {
+
+  &>*:not(:last-child) {
+    margin: 0 0 10px 0;
+  }
+
+  &_green {
+    background-color: #0d5c63;
+
+    .item-services__title {
+      color: #fff;
+    }
+
+    .item-services__text {
+      color: #fff;
+    }
+  }
+
+  &__icon {}
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.1px;
+    line-height: 133.333333%;
+    /* 32/24 */
+  }
+
+  &__text {
+    color: #737373;
+    line-height: 142.857143%;
+    /* 20/14 */
+  }
+}
+
+
+
+

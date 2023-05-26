@@ -1,0 +1,100 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 50;
+
+  &__container {
+    display: flex;
+    min-height: 104px;
+    align-items: center;
+
+    @include xs {
+      min-height: 70px;
+    }
+  }
+
+  &__logo {
+    font-weight: 700;
+    font-size: 24px;
+    color: inherit;
+  }
+
+  &__menu {
+    margin: 0 0 0 130px;
+
+    @include md {
+      margin: 0 0 0 40px;
+    }
+
+    @include xs {
+      margin: 0 0 0 20px;
+    }
+  }
+}
+
+.menu {
+  padding: 5px 0;
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin: 0 21px 0 0;
+    }
+  }
+
+  &__link {
+    color: #737373;
+    font-weight: 600;
+    line-height: 171.428571%;
+    /* 24/14 */
+
+    @include xs {
+      font-size: 16px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.header-block {
+  text-align: center;
+  letter-spacing: 0.2px;
+
+  &__title {
+    font-weight: 700;
+    line-height: 142.5%;
+    /* 57/40 */
+    font-size: 40px;
+
+    &:not(:last-child) {
+      margin: 0 0 10px 0;
+    }
+
+    @include lg {
+      font-size: 35px;
+    }
+
+    @include md {
+      font-size: 35px;
+    }
+  }
+
+  &__sub-title {
+    line-height: 142.5%;
+    /* 57/40 */
+    color: #737373;
+  }
+}
+
+
