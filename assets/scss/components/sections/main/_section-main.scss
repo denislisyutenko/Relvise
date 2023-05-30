@@ -20,11 +20,12 @@
     @include lg {
       padding: 120px 0 191px 0;
     }
+
     @include xs {
       padding: 115px 0 160px 0;
     }
 
-    & > *:not(:last-child) {
+    &>*:not(:last-child) {
       margin-bottom: 35px;
     }
   }
@@ -48,18 +49,16 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 150%;
-    /* 30/20 */
-
-    // @include xs {
-    //   padding: 115px 0 160px 0;
-    // }
   }
 
   &__buttons {
     display: flex;
     flex-wrap: wrap;
-
     margin: -10px 0;
+
+    @include xs-min {
+      gap: 10px;
+    }
   }
 
   &__button {

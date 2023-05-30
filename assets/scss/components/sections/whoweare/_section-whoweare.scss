@@ -111,7 +111,11 @@
 
 .whoweare {
   &__header {
-    margin: 0 0 100px 0;
+    margin-bottom: 100px;
+
+    @include xs {
+      margin-bottom: 60px;
+    }
   }
 }
 
@@ -142,7 +146,6 @@
   &__text {
     /* 20/14 */
     color: #737373;
-
     line-height: 142.857143%;
   }
 }
