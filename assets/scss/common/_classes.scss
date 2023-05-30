@@ -22,3 +22,19 @@
 
   object-fit: cover;
 }
+
+.page {
+  flex: 1 1 auto;
+
+  &__services {
+    margin: -111px 0 0 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  &____clients {
+    &:not(:last-child) {
+      margin: 0px 0px 10px 0px;
+    }
+  }
+}
